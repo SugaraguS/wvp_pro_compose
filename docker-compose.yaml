@@ -70,8 +70,8 @@ services:
       JT1078_PORT: ${JT1078_PORT}
       JT1078_PASS: ${JT1078_PASS}
     ports:
-      - 5060:5060
-      - 5060:5060/udp
+      - 15065:5060
+      - 15065:5060/udp
       - ${JT1078_PORT}:${JT1078_PORT}
       - ${JT1078_PORT}:${JT1078_PORT}/udp
       - 3000:3000
@@ -98,6 +98,7 @@ services:
     environment:
       TZ: ${TZ}
     ports:
+      - 554:554
       - 1935:1935
       - 8000:8000
       - 9000:9000
